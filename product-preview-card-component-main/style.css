@@ -1,0 +1,32 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+* {
+    font-family: "Montserrat";
+    background-color: hsl(30, 38%, 92%);
+}
+
+.card * {
+    background-color: hsl(0, 0%, 100%)
+}
+
+.card {
+    height: auto;
+    width: 375px;
+    font-size: 14px;
+}
+
+.top-section {
+    
+}
+
+.bottom-section {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-family: "Fraunces", Courier; 
+    font-weight: 700;
+    font-size: 2em;
+}
