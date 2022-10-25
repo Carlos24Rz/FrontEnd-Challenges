@@ -1,32 +1,91 @@
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
-* {
-    font-family: "Montserrat";
+body {
     background-color: hsl(30, 38%, 92%);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.card * {
-    background-color: hsl(0, 0%, 100%)
+* {
+    font-family: "Montserrat", Arial;
+    color: hsl(228, 12%, 48%);
 }
 
 .card {
     height: auto;
     width: 375px;
-    font-size: 14px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5% 5% 0% 0%;
 }
 
 .top-section {
-    
+    border-radius: 5% 5% 0% 0%;
 }
 
 .bottom-section {
     display: flex;
+    border: 25px solid white;
     flex-direction: column;
+    border-radius: 0 0 5% 5%;
+}
+
+.price-section {
+    display: flex;
+    align-items: center;
+}
+
+.price-section p {
+    margin: 0;
+}
+
+.price-section p:first-child {
+    font-size: 2em;
+    font-family: "Fraunces", Courier; 
+    color: hsl(158,35%,37%);
+    margin-right: 10%;
+}
+
+.price-section p:last-child {
+    text-decoration: line-through;
+    font-size: 1em;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 5% 5% 0% 0%;
 }
 
 h2 {
+    margin: 0;
     font-family: "Fraunces", Courier; 
     font-weight: 700;
     font-size: 2em;
+    color: hsl(212, 21%, 14%);
+}
+
+h3 {
+    margin-top: 0;
+    font-size: 0.8em;
+    font-weight: 500;
+    letter-spacing: 0.8em;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5em;
+    font-weight: 700;
+}
+
+button {
+    margin-top: 16px;
+    border: 0;
+    padding: 5% 0;
+    border-radius: 5%;
+    background-color: hsl(158,35%,37%);
+    color: white;
 }
