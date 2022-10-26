@@ -1,47 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
 body {
     background-color: hsl(30, 38%, 92%);
+    font-family: "Montserrat", sans-serif;
+    color: hsl(228, 12%, 48%);
+    font-size: 14px;
+}
+
+.card {
+    max-width: 375px;
+    border-radius: 5%;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.top-section, 
+.top-section img, 
+.bottom-section, 
+.price-section, 
+.bottom-section button {
+    width: 100%;
+}
+
+.top-section img {
+    border-radius: 5% 5% 0 0;
+}
+
+.bottom-section h2, 
+.bottom-section h3, 
+.bottom-section p,
+.bottom-section .price-section,
+.bottom-section .price-section p, 
+.bottom-section button
+{
     margin: 0;
     padding: 0;
 }
 
-* {
-    font-family: "Montserrat", Arial;
-    color: hsl(228, 12%, 48%);
-}
-
-.card {
-    height: auto;
-    width: 100%;
-    background-color: hsl(0, 0%, 100%);
-    border-radius: 5% 5% 0% 0%;
-}
-
-.top-section {
-    border-radius: 5% 5% 0% 0%;
-}
-
 .bottom-section {
     display: flex;
-    border: 25px solid white;
     flex-direction: column;
-    border-radius: 0 0 5% 5%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 7%;
+}
+
+.bottom-section h3 {
+    font-size: 0.8em;
+    font-weight: 500;
+    letter-spacing: 0.8em;
+    text-transform: uppercase;
+}
+
+.bottom-section p {
+    font-size: 1em;
+    line-height: 2em;
+    font-weight: 500;
+}
+
+
+.bottom-section h2 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-family: "Fraunces", serif; 
+    font-weight: 700;
+    font-size: 2em;
+    color: hsl(212, 21%, 14%);
 }
 
 .price-section {
+    flex-wrap: wrap;
     display: flex;
     align-items: center;
 }
 
-.price-section p {
-    margin: 0;
-}
-
 .price-section p:first-child {
     font-size: 2em;
-    font-family: "Fraunces", Courier; 
+    font-family: "Fraunces", serif; 
+    font-weight: 700;
     color: hsl(158,35%,37%);
     margin-right: 10%;
 }
@@ -51,39 +91,25 @@ body {
     font-size: 1em;
 }
 
-img {
-    width: 100%;
-    height: auto;
-    border-radius: 5% 5% 0% 0%;
-}
-
-h2 {
-    margin: 0;
-    font-family: "Fraunces", Courier; 
-    font-weight: 700;
-    font-size: 2em;
-    color: hsl(212, 21%, 14%);
-}
-
-h3 {
-    margin-top: 0;
-    font-size: 0.8em;
-    font-weight: 500;
-    letter-spacing: 0.8em;
-    text-transform: uppercase;
-}
-
-p {
-    font-size: 1em;
-    line-height: 1.5em;
-    font-weight: 700;
-}
-
-button {
-    margin-top: 16px;
-    border: 0;
-    padding: 5% 0;
-    border-radius: 5%;
+.bottom-section button {
+    padding: 5%;
+    border: none;
+    border-radius: 1em;
     background-color: hsl(158,35%,37%);
+    font-weight: 700;
     color: white;
 }
+
+@media only screen and (min-width:800px) {
+    .card {
+        max-width: 50%;
+        display: flex;
+    }
+
+    .top-section img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5% 0% 0 5%;
+    }
+}
+
