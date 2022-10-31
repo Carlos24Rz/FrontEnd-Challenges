@@ -1,0 +1,37 @@
+
+body {
+  padding: 15px;
+}
+
+
+.form-progress-bar[progress="25"] {
+  width: 25%;
+}
+
+.form-progress-bar[progress="50"] {
+  width: 50%;
+}
+
+.form-progress-bar[progress="75"] {
+  width: 75%;
+}
+
+.form-progress-bar[progress="100"] {
+  width: 100%;
+}
+
+.form-progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #007bff;
+}
+
+.form-progress-bar-wrapper {
+  width: 100%;
+  height: 1rem;
+  background-color: #e8ebee;
+}
+
+.app {
+  max-width: 540px;
+}
