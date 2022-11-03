@@ -1,0 +1,20 @@
+.card-body *{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.icon {
+    padding: 5%;
+    border-radius: 50%;
+    background-color: var(--Dark-Blue);
+}
+
+.submit {
+    background-color: var(--Orange);
+    border: none;
+}
+
+.submit:hover {
+    background-color: var(--White);
+    color: var(--Orange);
+}

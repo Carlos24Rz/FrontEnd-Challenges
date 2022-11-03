@@ -1,0 +1,13 @@
+.buttom-item {
+    background-color: var(--Dark-Blue);
+    border: none;
+    padding: 13px 20px;
+}
+
+.btn.buttom-item:hover {
+    background-color: var(--Medium-Grey);
+}
+
+.btn-check:checked+.btn {
+    background-color: var(--Orange);
+}
