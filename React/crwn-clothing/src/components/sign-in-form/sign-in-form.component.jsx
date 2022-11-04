@@ -41,7 +41,6 @@ const SignInForm = () => {
 
         try {
             const {user} = await signInUserWithEmailAndPassword(email,password);
-            console.log(user);
             setSignInFields(defaultSignInFields);
         } catch (error) {
             console.log(error.message);
