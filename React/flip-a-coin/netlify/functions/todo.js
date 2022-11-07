@@ -1,19 +1,22 @@
+const axios = require('axios');
 
 exports.handler = async function (event, context) {
     try {
-        const options = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': `${process.env.REACT_APP_API_KEY}`,
-                'X-RapidAPI-Host': `${process.env.REACT_APP_HOST}`
-            }
+        const request = {
+            method: 'get',
+            url: `${process.env.REACT_APP_TODO_BASE_URL}`
         };
 
-        const response = await fetch(`${process.env.REACT_APP_TODO_BASE_URL}`, options);
-        const data = await response.json();
+        axios.defaults.headers.common = {
+            'X-RapidAPI-Key': `${process.env.REACT_APP_API_KEY}`,
+            'X-RapidAPI-Host': `${process.env.REACT_APP_HOST}`
+        }
+
+
+        const response = await axios(request);
         return {
             statusCode: 200,
-            body: JSON.stringify(data)
+            body: JSON.stringify(response.data)
         }
     } catch (err){
         return {
