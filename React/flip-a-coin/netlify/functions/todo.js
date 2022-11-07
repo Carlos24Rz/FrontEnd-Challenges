@@ -12,7 +12,6 @@ exports.handler = async function (event, context) {
             'X-RapidAPI-Host': `${process.env.REACT_APP_HOST}`
         }
 
-
         const response = await axios(request);
         return {
             statusCode: 200,

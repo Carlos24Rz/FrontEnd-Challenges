@@ -1,5 +1,7 @@
 import React from "react";
+import Coin from "./components/coin/coin.component";
 import './App.css';
+
 
 function App() {
 
@@ -15,6 +17,7 @@ function App() {
   return (
     <div>
       <h1>Flip a Coin</h1>
+      <Coin />
       {flipValue && <p>{`The value is ${flipValue}`}</p>}
       <button onClick={flipCoin}>Flip</button>
     </div>
