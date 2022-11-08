@@ -1,0 +1,21 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    border: 10px solid black;
+}
+.heading {
+    width: clamp(54px,100%,400px);
+    border: 2px solid red;
+}
+
+.title {
+    float: left;
+}
+
+.scores-container {
+    display:flex;
+    float: right;
+}
