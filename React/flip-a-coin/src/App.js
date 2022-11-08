@@ -11,6 +11,7 @@ function App() {
     const url = './.netlify/functions/todo';
     const response = await fetch(url);
     const data = await response.json();
+    console.log(data);
     setFlipValue(data.outcome);
   }
 
