@@ -44,7 +44,7 @@
 }
 
 .reset {
-    flex-grow: 1;
+    flex-grow: 0;
     width: 140px;
     height: 40px;
     text-transform: uppercase;
