@@ -17,5 +17,6 @@
 
 .scores-container {
     display:flex;
-    float: right;
+    text-transform: uppercase;
 }
+

@@ -1,4 +1,7 @@
 .score-container {
     border: 1px solid purple;
     font-size: 13px;
+    text-align: center;
+    padding: 5px;
+    flex: 1;
 }
