@@ -1,6 +1,6 @@
 import './main.style.css';
 import React from "react";
-import ScoreContainer from "../../score-container/score-container.component";
+import ScoreContainer from "../score-container/score-container.component";
 import Coin from "../coin/coin.component";
 
 const Main = () => {
@@ -31,6 +31,12 @@ const Main = () => {
         }
     }
 
+    const reset = () => {
+        setHeadsCount(0);
+        setTailsCount(0);
+        setOutcome(null);
+    };
+
     return(
         <main className='main-content'>
             <div className='heading'>
@@ -40,8 +46,13 @@ const Main = () => {
                     <ScoreContainer outcome='Tails' count={tailsCount}/>
                 </div>
             </div>
+            <div className='subheading'>
+                {isSpinning && <p className='loading'>Flipping it!</p>} 
+                {outcome && <p className='outcome'> {`${outcome}!`}</p>}    
+                {(!outcome && !isSpinning) && <p>Flip the coin and guess your destiny!</p>}
+                <button onClick={reset} type="button" className='reset'>Reset</button>
+            </div>
             <Coin flipCoinHandler={flipCoin} outcome={outcome} isSpinning={isSpinning}/>
-            <p>{outcome ? `The value is ${outcome}` : ''}</p>
         </main>
     );
 };

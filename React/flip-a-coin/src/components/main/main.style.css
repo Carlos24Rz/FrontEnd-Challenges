@@ -1,22 +1,112 @@
+
+@keyframes pulse {
+    0% {
+      color: #776e65;
+    }
+    100% {
+      color: #cacac8;;
+    }
+  }
+
 .main-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5%;
-    border: 10px solid black;
+    margin: 0 auto;
+    width: 500px
 }
+
 .heading {
-    width: clamp(54px,100%,400px);
-    border: 2px solid red;
+    height: 6em;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .title {
-    float: left;
+    align-self: flex-end;
+    font-size: 3em;
+    color: #776e65;
 }
 
 .scores-container {
+    align-self: flex-start;
     display:flex;
+    gap: 1vw;
     text-transform: uppercase;
 }
 
+.subheading {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: #776e65;
+}
+
+.reset {
+    flex-grow: 1;
+    width: 140px;
+    height: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    background-color: #8f7a66;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.reset:hover {
+    cursor: pointer;
+}
+
+.outcome {
+    font-size: 2em;
+}
+
+.loading{
+    animation: pulse 0.5s linear alternate infinite;
+}
+
+@media only screen and (max-width: 500px){
+    .main-content{
+        width: 100%;
+    }
+
+    .heading {
+        height: auto;
+    }
+
+    .title {
+        text-align: center;
+        align-self: center;
+        font-size: 2em;
+        color: #776e65;
+        flex-grow: 1;
+    }
+
+    .subheading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .reset {
+        width: 100%;
+        height: 10vh;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+}
+
+@media only screen and (min-height: 800px) {
+    .main-content{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+}

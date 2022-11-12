@@ -7,14 +7,12 @@
 }
 
 .coin {
-  width: clamp(54px,100%,400px);
-  height: 0;
-  padding-bottom: clamp(54px,100%,400px);
+  width: 100%;
+  padding-top: 100%;
   cursor: pointer;
   position: relative;
   transition: all 1s ease;
   transform-style: preserve-3d;
-  border: 1px solid blue;
 }
 
 .coin img {

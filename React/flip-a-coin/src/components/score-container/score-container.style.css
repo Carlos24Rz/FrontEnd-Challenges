@@ -1,0 +1,19 @@
+.score-container {
+    text-align: center;
+    padding: 10px 5px;
+    width: 70px;
+    font-weight: 400;
+    border-radius: 3px;
+    background-color: #bbada0;
+}
+
+.score-container h2 {
+    font-size: 0.8em;
+    color: #eee4da;
+}
+
+.scores-container p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+}
