@@ -1,0 +1,50 @@
+:root {
+  --gray0: #f8f9fa;
+  --gray2: #e9ecef;
+  --gray4: #ced4da;
+  --gray6: #868e96;
+  --gray8: #343a40;
+  --teal0: #e6fcf5;
+  --teal1: #c3fae8;
+  --teal9: #087f5b;
+}
+
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--gray8);
+  line-height: 1;
+}
+
+.table {
+  width: 800px;
+  margin: 100px auto;
+  border-collapse: collapse;
+  font-size: 18px;
+
+}
+
+th, td {
+  padding: 16px 24px;
+  text-align: left;
+}
+
+thead th {
+  width: 25%;
+  background-color: var(--teal9);
+  color: white;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--gray0);
+} 
+
+tbody tr:nth-child(even) {
+  background-color: var(--gray2);
+} 

@@ -1,0 +1,96 @@
+:root {
+  --gray2: #e9ecef;
+  --gray5: #adb5bd;
+  --gray8: #343a40;
+  --red7: #f03e3e;
+  --violet6: #7950f2;
+  --violet9: #5f3dc4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Rubik', sans-serif;
+  color: var(--gray8);
+  font-size: 24px;
+  display: grid;
+  grid-template-columns: 80px 400px 1fr 250px;
+  grid-template-rows: 80px 1fr;
+}
+
+nav, menu, section, main, aside {
+  padding-top: 24px;
+}
+
+menu {
+  padding: 0 40px;
+  grid-column: 2 / -1;
+  background-color: var(--violet6);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+menu button {
+  font-size: 16px;
+  font-family: 'Rubik';
+  font-weight: 500;
+  padding: 8px 12px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background-color: var(--violet9);
+}
+
+menu button:last-child {
+  margin-left: auto;
+  background-color: var(--red7);
+}
+
+section, aside {
+  background-color: var(--gray2);
+}
+
+section {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  overflow-y: scroll;
+}
+
+section button {
+  height: 96px;
+  border: none;
+  background-color: var(--gray5);
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  color: var(--gray8);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+main h2, aside h2 {
+  font-size: 18px;
+  margin-top: 24px;
+  text-align: center;
+}
+
+nav {
+  grid-row: 1 / -1 ;
+  background-color: var(--gray8);
+  color: white;
+}
+
+nav h2 {
+  margin-top: 12px;
+  font-size: 18px;
+  text-align: center;
+}
+
+
