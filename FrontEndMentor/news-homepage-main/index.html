@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frontend Mentor New Homepage Challenge">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Frontend Mentor | News homepage</title>
+</head>
+<body>
+  <header class="nav-bar">
+    <a class="logo">
+      <img src="./assets/images/logo.svg" alt="The W Logo">
+    </a>
+    <nav class="nav-menu">
+      <ul class="list">
+        <li class="list-item"><a href="#">Home</a></li>
+        <li class="list-item"><a href="#">New</a></li>
+        <li class="list-item"><a href="#">Popular</a></li>
+        <li class="list-item"><a href="#">Trending</a></li>
+        <li class="list-item"><a href="#">Categories</a></li>
+      </ul>
+    </nav>
+    <button title="nav menu button" type="button" class="nav-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="menu-outline" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 160h352M80 256h352M80 352h352"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="close-outline" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/>
+      </svg>
+    </button>
+  </header>
+  <main>
+    <section class="headline-section">
+      <picture>
+        <source media="(max-width:57.5em)" srcset="./assets/images/image-web-3-mobile.jpg">
+        <source media="(min-width:57.5em)" srcset="./assets/images/image-web-3-desktop.jpg">
+        <img class="headline-img" src="./assets/images/image-web-3-mobile.jpg" alt="Wooden colored puzzle">
+      </picture>
+      <div class="headline-info">
+        <h1 class="headline-heading">The Bright Future of Web 3.0?</h1>
+        <div>
+          <p class="headline-text">
+            We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+            But is it really fulfilling its promise?
+          </p>
+          <a href="#" class="btn">Read more</a>
+        </div>
+      </div>
+    </section>
+    <aside class="section-new">
+      <h2 class="heading-secondary">
+        New 
+      </h2>
+      <article class="new-article">
+        <a href="#" class="new-article-title">
+          Hydrogen VS Electric Cars
+        </a>
+        <p class="new-article-description">
+          Will hydrogen-fueled cars ever catch up to EVs?
+        </p>
+      </article>
+      <article class="new-article">
+        <a href="#" class="new-article-title">
+          The Downsides of AI Artistry
+        </a>
+        <p class="new-article-description">
+          What are the possible adverse effects of on-demand AI image generation?        
+        </p>
+      </article>
+      <article class="new-article">
+        <a href="#" class="new-article-title">
+          Is VC Funding Drying Up?
+        </a>
+        <p class="new-article-description">
+          Private funding by VC firms is down 50% YOY. We take a look at what that means.
+        </p>
+      </article>
+    </aside>
+    <section class="articles-section">
+      <article class="article">
+        <img class="article-img" src="./assets/images/image-retro-pcs.jpg" alt="Retro computers">
+        <div class="article-info">
+          <p class="article-number">
+            01
+          </p>
+          <a href="#" class="article-title">
+            Reviving Retro PCs
+          </a>
+          <p class="article-description">
+            What happens when old PCs are given modern upgrades?
+          </p>
+        </div>
+      </article>
+      <article class="article">
+        <img class="article-img" src="./assets/images/image-top-laptops.jpg" alt="A Keyboard glowing in red">
+        <div class="article-info">
+          <p class="article-number">
+            02
+          </p>
+          <a href="#" class="article-title">
+            Top 10 Laptops of 2022
+          </a>
+          <p class="article-description">
+            Our best picks for various needs and budgets.
+          </p>
+        </div>
+      </article>
+      <article class="article">
+        <img class="article-img" src="./assets/images/image-gaming-growth.jpg" alt="A gaming controller">
+        <div class="article-info">
+          <p class="article-number">
+            03
+          </p>
+          <a href="#" class="article-title">
+            The Growth of Gaming
+          </a>
+          <p class="article-description">
+            How the pandemic has sparked fresh opportunities.
+          </p>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  </footer>
+  <script src="./js/script.js"></script>
+</body>
+</html>
