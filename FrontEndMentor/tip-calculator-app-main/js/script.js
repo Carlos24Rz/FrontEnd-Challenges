@@ -119,4 +119,5 @@ resetButton.addEventListener('click', (event) => {
   peopleInputField.value = "";
 
   calculate();
+  
 });
