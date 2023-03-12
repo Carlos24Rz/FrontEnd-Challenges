@@ -4,9 +4,11 @@ import { useParams } from 'react-router-dom';
 import ProductCard from '../../components/product-card/product-card.component';
 import './category.style.scss';
 
+import { selectCategoriesMap } from '../../store/categories/category.selector';
+
 const Category = () => {
     const {category} = useParams();
-    const categoriesMap = useSelector((state) => state.categories.categoriesMap);
+    const categoriesMap = useSelector(selectCategoriesMap);
     const [products,setProducts] = useState(categoriesMap[category]);
 
     useEffect(() => {

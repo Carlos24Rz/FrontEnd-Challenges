@@ -1,6 +1,6 @@
-export const setCategoriesMap = (categoriesMap) => {
+export const setCategories = (categories) => {
     return {
-        type: 'SET_CATEGORIES_MAP',
-        payload: categoriesMap
+        type: 'SET_CATEGORIES',
+        payload: categories
     };
 };

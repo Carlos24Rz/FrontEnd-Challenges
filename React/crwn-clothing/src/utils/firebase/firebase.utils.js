@@ -10,7 +10,7 @@ import {
     query,
     getDocs
 } from 'firebase/firestore';
-import { 
+import {
     getAuth,
     signInWithRedirect,
     signInWithPopup,
@@ -25,12 +25,12 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAU7s0p9scauVOaLa6aRLxegTpLdI647jY",
-  authDomain: "clothing-website-app.firebaseapp.com",
-  projectId: "clothing-website-app",
-  storageBucket: "clothing-website-app.appspot.com",
-  messagingSenderId: "790943989755",
-  appId: "1:790943989755:web:7ce32553160bcbfa16955e"
+    apiKey: "AIzaSyAU7s0p9scauVOaLa6aRLxegTpLdI647jY",
+    authDomain: "clothing-website-app.firebaseapp.com",
+    projectId: "clothing-website-app",
+    storageBucket: "clothing-website-app.appspot.com",
+    messagingSenderId: "790943989755",
+    appId: "1:790943989755:web:7ce32553160bcbfa16955e"
 };
 
 // Initialize Firebase
@@ -43,7 +43,7 @@ provider.setCustomParameters({
 });
 
 export const auth = getAuth();
-export  const signInWithGooglePopup = () => signInWithPopup(auth, provider);
+export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 export const signInWithGoogleRedirect = () => signInWithRedirect(auth, provider);
 
 export const db = getFirestore();
@@ -66,25 +66,19 @@ export const getCategoriesAndDocument = async () => {
     const q = query(collectionRef);
 
     const querySnapshot = await getDocs(q);
-    const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
-        const {title, items} = docSnapshot.data()
-        acc[title.toLowerCase()] = items;
-        return acc;
-    },{})
-
-    return categoryMap;
+    return querySnapshot.docs.map(docSnapshot => docSnapshot.data());
 }
 
-export const createUserDocumentFromAuth = async (userAuth) =>{
+export const createUserDocumentFromAuth = async (userAuth) => {
     const userDocRef = doc(db, 'users', userAuth.uid);
 
     const userSnapshot = await getDoc(userDocRef);
 
-    if(!userSnapshot.exists()) {
-        const {displayName, email} = userAuth;
+    if (!userSnapshot.exists()) {
+        const { displayName, email } = userAuth;
         const createdAt = new Date();
 
-        try{
+        try {
             await setDoc(userDocRef, {
                 displayName,
                 email,
@@ -98,12 +92,12 @@ export const createUserDocumentFromAuth = async (userAuth) =>{
     return userDocRef;
 };
 
-export const createAuthUserWithEmailAndPassword = async (email,password) => {
+export const createAuthUserWithEmailAndPassword = async (email, password) => {
     return await createUserWithEmailAndPassword(auth, email, password);
 };
 
-export const signInUserWithEmailAndPassword = async (email,pasword) => {
-    return await signInWithEmailAndPassword(auth,email,pasword);
+export const signInUserWithEmailAndPassword = async (email, pasword) => {
+    return await signInWithEmailAndPassword(auth, email, pasword);
 };
 
 export const signOutUser = async () => {
@@ -111,5 +105,5 @@ export const signOutUser = async () => {
 };
 
 export const onAuthStateChangedListener = (callback) => {
-    return onAuthStateChanged(auth,callback);
+    return onAuthStateChanged(auth, callback);
 }
