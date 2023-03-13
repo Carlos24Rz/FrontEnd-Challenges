@@ -1,16 +1,19 @@
 import React from 'react';
 import {Outlet, Link} from 'react-router-dom';
-import navLogo from '../../assets/crown.svg'
-import { UserContext } from '../../context/user/user.context';
-import { CartContext } from '../../context/cart/cart.context';
+
+import { useSelector } from 'react-redux';
+import { selectIsCartOpen } from '../../store/cart/cart.selector';
+
 import { signOutUser } from '../../utils/firebase/firebase.utils';
+
+import navLogo from '../../assets/crown.svg';
 import CartIcon from '../../components/cart-icon/cart-icon.component';
 import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
 import './navigation.styles.scss'
 
 const Navigation = () => {
-    const {currentUser} = React.useContext(UserContext);
-    const {isActive} = React.useContext(CartContext);
+    const currentUser = useSelector((state) => state.user.currentUser);
+    const isActive = useSelector(selectIsCartOpen);
     return (
         <>
             <header className='navigation'>
