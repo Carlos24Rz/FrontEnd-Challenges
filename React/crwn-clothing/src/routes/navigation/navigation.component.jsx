@@ -2,8 +2,8 @@ import React from 'react';
 import {Outlet, Link} from 'react-router-dom';
 
 import { useSelector } from 'react-redux';
+import { selectIsCartOpen } from '../../store/cart/cart.selector';
 
-import { CartContext } from '../../context/cart/cart.context';
 import { signOutUser } from '../../utils/firebase/firebase.utils';
 
 import navLogo from '../../assets/crown.svg';
@@ -13,7 +13,7 @@ import './navigation.styles.scss'
 
 const Navigation = () => {
     const currentUser = useSelector((state) => state.user.currentUser);
-    const {isActive} = React.useContext(CartContext);
+    const isActive = useSelector(selectIsCartOpen);
     return (
         <>
             <header className='navigation'>

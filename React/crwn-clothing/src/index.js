@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
 import App from './App';
-import { CartProvider } from './context/cart/cart.context';
 
 import { Provider } from 'react-redux';
-import { store } from './store/store';
+import { store, persistor } from './store/store';
+
+import { PersistGate } from 'redux-persist/integration/react';
 
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
@@ -14,11 +15,11 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-    <BrowserRouter>
-      <CartProvider>
+    <PersistGate persistor={persistor}>
+      <BrowserRouter>
         <App />
-      </CartProvider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </PersistGate>
   </Provider>
 );
 
